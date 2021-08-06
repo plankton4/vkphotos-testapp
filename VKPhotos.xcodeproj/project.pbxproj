@@ -10,10 +10,18 @@
 		4CA58000FEB0416875506EF3 /* Pods_VKPhotos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FDB36E60767ADA2BA5C2634 /* Pods_VKPhotos.framework */; };
 		9B07AB1026BD39A50050F768 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB0F26BD39A50050F768 /* AppDelegate.swift */; };
 		9B07AB1226BD39A50050F768 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB1126BD39A50050F768 /* SceneDelegate.swift */; };
-		9B07AB1426BD39A50050F768 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB1326BD39A50050F768 /* ViewController.swift */; };
 		9B07AB1726BD39A50050F768 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B07AB1526BD39A50050F768 /* Main.storyboard */; };
 		9B07AB1926BD39A60050F768 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B07AB1826BD39A60050F768 /* Assets.xcassets */; };
 		9B07AB1C26BD39A60050F768 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B07AB1A26BD39A60050F768 /* LaunchScreen.storyboard */; };
+		9B07AB2926BD8EB90050F768 /* VKDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB2826BD8EB90050F768 /* VKDelegate.swift */; };
+		9B07AB2C26BD8F5A0050F768 /* VKHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB2B26BD8F5A0050F768 /* VKHelper.swift */; };
+		9B07AB2F26BD90880050F768 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB2E26BD90880050F768 /* Utils.swift */; };
+		9B07AB3126BD9B4A0050F768 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB3026BD9B4A0050F768 /* SplashScreenViewController.swift */; };
+		9B07AB3326BD9FD10050F768 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB3226BD9FD10050F768 /* LoginViewController.swift */; };
+		9B07AB3726BDA06D0050F768 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB3626BDA06D0050F768 /* PhotosViewController.swift */; };
+		9B07AB3B26BDA2350050F768 /* VKLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB3A26BDA2350050F768 /* VKLoginButton.swift */; };
+		9B07AB3D26BDA24F0050F768 /* VKLoginButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B07AB3C26BDA24F0050F768 /* VKLoginButton.xib */; };
+		9B07AB4026BDAC940050F768 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB3F26BDAC940050F768 /* UIColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +29,19 @@
 		9B07AB0C26BD39A50050F768 /* VKPhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKPhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B07AB0F26BD39A50050F768 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B07AB1126BD39A50050F768 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9B07AB1326BD39A50050F768 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9B07AB1626BD39A50050F768 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B07AB1826BD39A60050F768 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B07AB1B26BD39A60050F768 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B07AB1D26BD39A60050F768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B07AB2826BD8EB90050F768 /* VKDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKDelegate.swift; sourceTree = "<group>"; };
+		9B07AB2B26BD8F5A0050F768 /* VKHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKHelper.swift; sourceTree = "<group>"; };
+		9B07AB2E26BD90880050F768 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		9B07AB3026BD9B4A0050F768 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		9B07AB3226BD9FD10050F768 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9B07AB3626BDA06D0050F768 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		9B07AB3A26BDA2350050F768 /* VKLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginButton.swift; sourceTree = "<group>"; };
+		9B07AB3C26BDA24F0050F768 /* VKLoginButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VKLoginButton.xib; sourceTree = "<group>"; };
+		9B07AB3F26BDAC940050F768 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		9FDB36E60767ADA2BA5C2634 /* Pods_VKPhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKPhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2093DE97DB0FC14475DFB7 /* Pods-VKPhotos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKPhotos.debug.xcconfig"; path = "Target Support Files/Pods-VKPhotos/Pods-VKPhotos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,12 +87,14 @@
 		9B07AB0E26BD39A50050F768 /* VKPhotos */ = {
 			isa = PBXGroup;
 			children = (
+				9B07AB3E26BDAC7B0050F768 /* Extensions */,
+				9B07AB3826BDA1920050F768 /* Views */,
+				9B07AB2D26BD8FB90050F768 /* Utils */,
 				9B07AB1D26BD39A60050F768 /* Info.plist */,
-				9B07AB0F26BD39A50050F768 /* AppDelegate.swift */,
-				9B07AB1126BD39A50050F768 /* SceneDelegate.swift */,
-				9B07AB2626BD87580050F768 /* View controllers  */,
+				9B07AB2726BD8BCF0050F768 /* Delegates */,
 				9B07AB2426BD86E20050F768 /* Resources */,
 				9B07AB2326BD86D40050F768 /* Storyboards */,
+				9B07AB2626BD87580050F768 /* View controllers  */,
 			);
 			path = VKPhotos;
 			sourceTree = "<group>";
@@ -101,9 +119,55 @@
 		9B07AB2626BD87580050F768 /* View controllers  */ = {
 			isa = PBXGroup;
 			children = (
-				9B07AB1326BD39A50050F768 /* ViewController.swift */,
+				9B07AB3026BD9B4A0050F768 /* SplashScreenViewController.swift */,
+				9B07AB3226BD9FD10050F768 /* LoginViewController.swift */,
+				9B07AB3626BDA06D0050F768 /* PhotosViewController.swift */,
 			);
 			path = "View controllers ";
+			sourceTree = "<group>";
+		};
+		9B07AB2726BD8BCF0050F768 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				9B07AB0F26BD39A50050F768 /* AppDelegate.swift */,
+				9B07AB1126BD39A50050F768 /* SceneDelegate.swift */,
+				9B07AB2826BD8EB90050F768 /* VKDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		9B07AB2D26BD8FB90050F768 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9B07AB2B26BD8F5A0050F768 /* VKHelper.swift */,
+				9B07AB2E26BD90880050F768 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9B07AB3826BDA1920050F768 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9B07AB3926BDA19A0050F768 /* VKLoginButton */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9B07AB3926BDA19A0050F768 /* VKLoginButton */ = {
+			isa = PBXGroup;
+			children = (
+				9B07AB3A26BDA2350050F768 /* VKLoginButton.swift */,
+				9B07AB3C26BDA24F0050F768 /* VKLoginButton.xib */,
+			);
+			path = VKLoginButton;
+			sourceTree = "<group>";
+		};
+		9B07AB3E26BDAC7B0050F768 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9B07AB3F26BDAC940050F768 /* UIColorExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		EE6BBF6EC9F6AFA2B2DF90AF /* Pods */ = {
@@ -174,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B07AB3D26BDA24F0050F768 /* VKLoginButton.xib in Resources */,
 				9B07AB1C26BD39A60050F768 /* LaunchScreen.storyboard in Resources */,
 				9B07AB1926BD39A60050F768 /* Assets.xcassets in Resources */,
 				9B07AB1726BD39A50050F768 /* Main.storyboard in Resources */,
@@ -229,9 +294,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B07AB1426BD39A50050F768 /* ViewController.swift in Sources */,
+				9B07AB3B26BDA2350050F768 /* VKLoginButton.swift in Sources */,
+				9B07AB3326BD9FD10050F768 /* LoginViewController.swift in Sources */,
+				9B07AB3726BDA06D0050F768 /* PhotosViewController.swift in Sources */,
 				9B07AB1026BD39A50050F768 /* AppDelegate.swift in Sources */,
+				9B07AB3126BD9B4A0050F768 /* SplashScreenViewController.swift in Sources */,
+				9B07AB2C26BD8F5A0050F768 /* VKHelper.swift in Sources */,
 				9B07AB1226BD39A50050F768 /* SceneDelegate.swift in Sources */,
+				9B07AB2926BD8EB90050F768 /* VKDelegate.swift in Sources */,
+				9B07AB2F26BD90880050F768 /* Utils.swift in Sources */,
+				9B07AB4026BDAC940050F768 /* UIColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

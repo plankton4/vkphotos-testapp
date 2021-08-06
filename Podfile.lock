@@ -1,0 +1,20 @@
+PODS:
+  - Kingfisher (6.3.1)
+  - SwiftyVK (3.4.2)
+
+DEPENDENCIES:
+  - Kingfisher
+  - SwiftyVK
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Kingfisher
+    - SwiftyVK
+
+SPEC CHECKSUMS:
+  Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
+  SwiftyVK: 5005dac6e85f7b0fd44e21ed2f021a397dff4cab
+
+PODFILE CHECKSUM: 2241fe9cbcd2e98a94ead451c116619d3f757554
+
+COCOAPODS: 1.10.2

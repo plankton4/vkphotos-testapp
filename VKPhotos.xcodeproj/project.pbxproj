@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CA58000FEB0416875506EF3 /* Pods_VKPhotos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FDB36E60767ADA2BA5C2634 /* Pods_VKPhotos.framework */; };
 		9B07AB1026BD39A50050F768 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB0F26BD39A50050F768 /* AppDelegate.swift */; };
 		9B07AB1226BD39A50050F768 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB1126BD39A50050F768 /* SceneDelegate.swift */; };
 		9B07AB1426BD39A50050F768 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB1326BD39A50050F768 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2DA3BA9D75FAD34246ED4B6C /* Pods-VKPhotos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKPhotos.release.xcconfig"; path = "Target Support Files/Pods-VKPhotos/Pods-VKPhotos.release.xcconfig"; sourceTree = "<group>"; };
 		9B07AB0C26BD39A50050F768 /* VKPhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKPhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B07AB0F26BD39A50050F768 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B07AB1126BD39A50050F768 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		9B07AB1826BD39A60050F768 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B07AB1B26BD39A60050F768 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B07AB1D26BD39A60050F768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FDB36E60767ADA2BA5C2634 /* Pods_VKPhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKPhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE2093DE97DB0FC14475DFB7 /* Pods-VKPhotos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKPhotos.debug.xcconfig"; path = "Target Support Files/Pods-VKPhotos/Pods-VKPhotos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CA58000FEB0416875506EF3 /* Pods_VKPhotos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F46650F5F7C5B7489543B35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FDB36E60767ADA2BA5C2634 /* Pods_VKPhotos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9B07AB0326BD39A50050F768 = {
 			isa = PBXGroup;
 			children = (
 				9B07AB0E26BD39A50050F768 /* VKPhotos */,
 				9B07AB0D26BD39A50050F768 /* Products */,
+				EE6BBF6EC9F6AFA2B2DF90AF /* Pods */,
+				0F46650F5F7C5B7489543B35 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +71,48 @@
 		9B07AB0E26BD39A50050F768 /* VKPhotos */ = {
 			isa = PBXGroup;
 			children = (
+				9B07AB1D26BD39A60050F768 /* Info.plist */,
 				9B07AB0F26BD39A50050F768 /* AppDelegate.swift */,
 				9B07AB1126BD39A50050F768 /* SceneDelegate.swift */,
-				9B07AB1326BD39A50050F768 /* ViewController.swift */,
-				9B07AB1526BD39A50050F768 /* Main.storyboard */,
-				9B07AB1826BD39A60050F768 /* Assets.xcassets */,
-				9B07AB1A26BD39A60050F768 /* LaunchScreen.storyboard */,
-				9B07AB1D26BD39A60050F768 /* Info.plist */,
+				9B07AB2626BD87580050F768 /* View controllers  */,
+				9B07AB2426BD86E20050F768 /* Resources */,
+				9B07AB2326BD86D40050F768 /* Storyboards */,
 			);
 			path = VKPhotos;
+			sourceTree = "<group>";
+		};
+		9B07AB2326BD86D40050F768 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9B07AB1526BD39A50050F768 /* Main.storyboard */,
+				9B07AB1A26BD39A60050F768 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		9B07AB2426BD86E20050F768 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9B07AB1826BD39A60050F768 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9B07AB2626BD87580050F768 /* View controllers  */ = {
+			isa = PBXGroup;
+			children = (
+				9B07AB1326BD39A50050F768 /* ViewController.swift */,
+			);
+			path = "View controllers ";
+			sourceTree = "<group>";
+		};
+		EE6BBF6EC9F6AFA2B2DF90AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE2093DE97DB0FC14475DFB7 /* Pods-VKPhotos.debug.xcconfig */,
+				2DA3BA9D75FAD34246ED4B6C /* Pods-VKPhotos.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +122,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9B07AB2026BD39A60050F768 /* Build configuration list for PBXNativeTarget "VKPhotos" */;
 			buildPhases = (
+				C68742976493A296DC7F5D29 /* [CP] Check Pods Manifest.lock */,
 				9B07AB0826BD39A50050F768 /* Sources */,
 				9B07AB0926BD39A50050F768 /* Frameworks */,
 				9B07AB0A26BD39A50050F768 /* Resources */,
+				2E76F32905396F5FF2988E30 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +181,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E76F32905396F5FF2988E30 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VKPhotos/Pods-VKPhotos-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VKPhotos/Pods-VKPhotos-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VKPhotos/Pods-VKPhotos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C68742976493A296DC7F5D29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VKPhotos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9B07AB0826BD39A50050F768 /* Sources */ = {
@@ -283,12 +375,14 @@
 		};
 		9B07AB2126BD39A60050F768 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE2093DE97DB0FC14475DFB7 /* Pods-VKPhotos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N48552PM44;
 				INFOPLIST_FILE = VKPhotos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,12 +396,14 @@
 		};
 		9B07AB2226BD39A60050F768 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DA3BA9D75FAD34246ED4B6C /* Pods-VKPhotos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N48552PM44;
 				INFOPLIST_FILE = VKPhotos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

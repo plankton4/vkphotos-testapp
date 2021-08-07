@@ -82,6 +82,21 @@ Gallery</string>
             </objects>
             <point key="canvasLocation" x="1930" y="-250"/>
         </scene>
+        <!--Detail Photo View Controller-->
+        <scene sceneID="K6E-Kj-64L">
+            <objects>
+                <viewController storyboardIdentifier="DetailPhotoViewController" id="eF1-ml-p7b" customClass="DetailPhotoViewController" customModule="VKPhotos" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iGb-pz-kMH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="FpQ-Wq-qf3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DrT-Hs-9Mv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2842" y="-250"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="5rD-Dw-ET6">
             <objects>

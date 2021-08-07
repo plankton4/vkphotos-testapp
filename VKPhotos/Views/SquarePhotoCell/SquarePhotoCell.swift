@@ -14,7 +14,6 @@ class SquarePhotoCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     func configure(urlString: String, sideLength: CGFloat) {
@@ -39,18 +38,7 @@ class SquarePhotoCell: UICollectionViewCell {
             options: [
                 .processor(processor),
                 .scaleFactor(UIScreen.main.scale),
-                .transition(.fade(0.3)),
-                .forceRefresh
-                //.cacheOriginalImage
+                .transition(.fade(0.3))
             ])
-//        {
-//            result in
-//            switch result {
-//            case .success(let value):
-//                print("Task done for: \(value.source.url?.absoluteString ?? "")")
-//            case .failure(let error):
-//                print("Job failed: \(error.localizedDescription)")
-//            }
-//        }
     }
 }

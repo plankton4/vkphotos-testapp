@@ -81,4 +81,13 @@ extension PhotosViewController {
         
         return cell
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "DetailPhotoViewController") as? DetailPhotoViewController
+        {
+            vc.initialIndex = indexPath.item
+            vc.photos = UserData.shared.photos
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }

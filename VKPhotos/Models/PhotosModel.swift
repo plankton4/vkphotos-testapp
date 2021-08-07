@@ -13,6 +13,7 @@ class PhotosModel {
     func fill(photos: [CodablePhoto]) {
         for photo in photos {
             let photoData = PhotoData()
+            photoData.date = photo.date
             
             for size in photo.sizes {
                 if let type = SizeType(rawValue: size.type) {
@@ -34,6 +35,8 @@ class PhotoData {
     /// key: Size.type, value: Size.url
     fileprivate var urlDict = [SizeType: String]()
     init() { }
+    
+    var date: Int?
     
     var sUrl: String? {
         if let url = urlDict[.m] {

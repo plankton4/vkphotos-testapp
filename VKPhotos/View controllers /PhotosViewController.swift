@@ -6,25 +6,35 @@
 //
 
 import UIKit
+import Kingfisher
 
 private let reuseIdentifier = "Cell"
 
 class PhotosViewController: UICollectionViewController {
+    
+    var photos = [PhotoData]()
+    var cellSideLength: CGFloat = 0.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.navigationBar.tintColor = .reversedSystemColor
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Выход", style: .plain, target: self, action: #selector(logout))
+        cellSideLength = view.frame.width * 0.5 - 1
+
+        let nibName = UINib(nibName: "SquarePhotoCell", bundle: nil)
+        collectionView.register(nibName, forCellWithReuseIdentifier: reuseIdentifier)
         
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
+        requestVKPhotos()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if let collectionViewFlowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+            collectionViewFlowLayout.estimatedItemSize = CGSize(width: cellSideLength, height: cellSideLength)
+            collectionViewFlowLayout.minimumLineSpacing = 2.0
+        }
     }
     
     @objc func logout() {
@@ -35,60 +45,40 @@ class PhotosViewController: UICollectionViewController {
         }
         VKHelper.shared.logout()
     }
+    
+    func requestVKPhotos() {
+        VKHelper.shared.getPhotos { [weak self] isOk in
+            if isOk {
+                print("IS OK!")
+                self?.reload()
+            }
+        }
+    }
+    
+    func reload() {
+        photos = UserData.shared.photos
+        collectionView.reloadData()
+    }
 
 }
 
 extension PhotosViewController {
-    
-    // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        return photos.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
-    
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SquarePhotoCell
+        cell.configure(
+            urlString: photos[indexPath.item].mUrl ?? "",
+            sideLength: cellSideLength
+        )
+        
         return cell
     }
-    
-    
-    // MARK: UICollectionViewDelegate
-    
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-    
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
 }

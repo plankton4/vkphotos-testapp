@@ -51,4 +51,28 @@ class VKHelper {
     func isTokenValid() -> Bool {
         return VK.sessions.default.accessToken?.isValid ?? false
     }
+    
+    func getPhotos(callback: ((_ isOk: Bool) -> ())?) {
+        print("Get photos")
+        VK.API.Photos.get([
+            .ownerId: "-128666765", // MobileUp community id
+            .albumId: "266276915"
+        ]).onSuccess { data in
+            let decoder = JSONDecoder()
+        
+            if let parsedPhotos = try? decoder.decode(CodablePhotos.self, from: data) {
+                UserData.shared.setPhotos(photos: parsedPhotos.items)
+                if let callback = callback {
+                    DispatchQueue.main.async {
+                        callback(true)
+                    }
+                }
+            }
+        }.onError { error in
+            print(error)
+            DispatchQueue.main.async {
+                Utils.showAlert(title: "Error!", message: "Не удалось получить фото")
+            }
+        }.send()
+    }
 }

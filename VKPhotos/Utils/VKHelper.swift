@@ -12,9 +12,7 @@ class VKHelper {
     
     static let shared = VKHelper()
     
-    private init() {
-        print("VKHelper created!!!")
-    }
+    private init() { }
     
     func authorize(successFunc: (() -> ())?) {
         VK.sessions.default.logIn(

@@ -36,7 +36,7 @@ class VKHelper {
                 default:
                     print("Error vk auth \(error)")
                     DispatchQueue.main.async {
-                        Utils.showAlert(title: "Error!", message: "Ошибка авторизации")
+                        Utils.showAlert(title: "Беда!", message: "Ошибка авторизации.")
                     }
                 }
             }
@@ -71,7 +71,7 @@ class VKHelper {
         }.onError { error in
             print(error)
             DispatchQueue.main.async {
-                Utils.showAlert(title: "Error!", message: "Не удалось получить фото")
+                Utils.showAlert(title: "Беда!", message: "Не удалось получить фото.")
             }
         }.send()
     }

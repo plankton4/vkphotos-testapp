@@ -123,11 +123,21 @@ class DetailPhotoViewController: UIViewController {
     
     @objc func sharePhoto() {
         guard let image = imageView.image?.jpegData(compressionQuality: 1) else {
-            Utils.showAlert(title: "Error!", message: "Что-то пошло не так =(")
+            Utils.showAlert(title: "Беда!", message: "Что-то пошло не так.")
             return
         }
         
         let vc = UIActivityViewController(activityItems: [image], applicationActivities: [])
+        vc.completionWithItemsHandler = { (_, success, _, error) in
+            print("Success: \(success), Error \(String(describing: error))")
+            if success {
+                Utils.showAlert(title: "Успех!", message: "Фото сохранено.")
+            } else {
+                if error != nil {
+                    Utils.showAlert(title: "Беда!", message: "Не удалось сохранить фото.")
+                }
+            }
+        }
         present(vc, animated: true)
     }
 }

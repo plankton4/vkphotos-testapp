@@ -27,6 +27,7 @@
 		9B07AB4A26BE49D70050F768 /* SquarePhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B07AB4826BE49D70050F768 /* SquarePhotoCell.xib */; };
 		9B07AB4C26BE81860050F768 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB4B26BE81860050F768 /* UserData.swift */; };
 		9B07AB4E26BE92FC0050F768 /* PhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB4D26BE92FC0050F768 /* PhotosModel.swift */; };
+		9B07AB5026BEA7AF0050F768 /* DetailPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB4F26BEA7AF0050F768 /* DetailPhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		9B07AB4826BE49D70050F768 /* SquarePhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquarePhotoCell.xib; sourceTree = "<group>"; };
 		9B07AB4B26BE81860050F768 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		9B07AB4D26BE92FC0050F768 /* PhotosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosModel.swift; sourceTree = "<group>"; };
+		9B07AB4F26BEA7AF0050F768 /* DetailPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoViewController.swift; sourceTree = "<group>"; };
 		9FDB36E60767ADA2BA5C2634 /* Pods_VKPhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKPhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2093DE97DB0FC14475DFB7 /* Pods-VKPhotos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKPhotos.debug.xcconfig"; path = "Target Support Files/Pods-VKPhotos/Pods-VKPhotos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +135,7 @@
 				9B07AB3026BD9B4A0050F768 /* SplashScreenViewController.swift */,
 				9B07AB3226BD9FD10050F768 /* LoginViewController.swift */,
 				9B07AB3626BDA06D0050F768 /* PhotosViewController.swift */,
+				9B07AB4F26BEA7AF0050F768 /* DetailPhotoViewController.swift */,
 			);
 			path = "View controllers ";
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				9B07AB2C26BD8F5A0050F768 /* VKHelper.swift in Sources */,
 				9B07AB1226BD39A50050F768 /* SceneDelegate.swift in Sources */,
 				9B07AB2926BD8EB90050F768 /* VKDelegate.swift in Sources */,
+				9B07AB5026BEA7AF0050F768 /* DetailPhotoViewController.swift in Sources */,
 				9B07AB2F26BD90880050F768 /* Utils.swift in Sources */,
 				9B07AB4026BDAC940050F768 /* UIColorExtensions.swift in Sources */,
 			);

@@ -20,7 +20,7 @@ class VKLoginButton: UIButton {
     
     func configure() {
         backgroundColor = .reversedSystemColor
-        setTitleColor(.systemBackground, for: .normal) 
+        setTitleColor(.systemBackground, for: .normal)
         layer.cornerRadius = 8
         if let superview = superview {
             NSLayoutConstraint.activate([

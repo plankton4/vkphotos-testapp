@@ -7,7 +7,6 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -49,6 +48,7 @@ Gallery</string>
                             <constraint firstItem="kjh-FH-sFg" firstAttribute="top" secondItem="aFY-4r-kjB" secondAttribute="top" constant="164" id="Xh6-am-iB1"/>
                             <constraint firstItem="kjh-FH-sFg" firstAttribute="leading" secondItem="2iC-JW-VSf" secondAttribute="leading" constant="24" id="hL1-lC-zQp"/>
                             <constraint firstItem="2iC-JW-VSf" firstAttribute="trailing" secondItem="kjh-FH-sFg" secondAttribute="trailing" constant="24" id="lTN-0b-lC8"/>
+                            <constraint firstItem="2iC-JW-VSf" firstAttribute="bottom" secondItem="kjh-FH-sFg" secondAttribute="bottom" constant="499.32999999999998" id="xor-Pj-fFk"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -60,26 +60,17 @@ Gallery</string>
         <scene sceneID="6FP-Y1-ZxJ">
             <objects>
                 <collectionViewController id="TPT-gv-EnC" customClass="PhotosViewController" customModule="VKPhotos" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="wqi-td-6yX">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wqi-td-6yX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vhv-wu-9Mq">
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="vhv-wu-9Mq">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="17v-uP-1U8">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="B9Z-Q9-H9N">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
-                            </collectionViewCell>
-                        </cells>
+                        <cells/>
                         <connections>
                             <outlet property="dataSource" destination="TPT-gv-EnC" id="c6c-Hk-Kvk"/>
                             <outlet property="delegate" destination="TPT-gv-EnC" id="Pjl-fd-dvi"/>
@@ -120,9 +111,6 @@ Gallery</string>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

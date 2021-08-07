@@ -18,7 +18,7 @@ class DetailPhotoViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: #selector(backButtonPressed))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ShareButton"), style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ShareButton"), style: .plain, target: self, action: #selector(sharePhoto))
         
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -90,6 +90,16 @@ class DetailPhotoViewController: UIViewController {
     
     @objc func backButtonPressed() {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func sharePhoto() {
+        guard let image = imageView.image?.jpegData(compressionQuality: 1) else {
+            Utils.showAlert(title: "Error!", message: "Что-то пошло не так =(")
+            return
+        }
+        
+        let vc = UIActivityViewController(activityItems: [image], applicationActivities: [])
+        present(vc, animated: true)
     }
 }
 

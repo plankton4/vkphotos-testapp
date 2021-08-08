@@ -104,7 +104,7 @@ class DetailPhotoViewController: UIViewController {
         if let date = photos[index].date {
             let now = Date(timeIntervalSince1970: Double(date))
             let formatter = DateFormatter()
-            formatter.locale = Locale(identifier: "ru_RU")
+            formatter.locale = Locale.current
             formatter.dateStyle = .long
             formatter.timeStyle = .none
             var datetime = formatter.string(from: now)
@@ -123,7 +123,7 @@ class DetailPhotoViewController: UIViewController {
     
     @objc func sharePhoto() {
         guard let image = imageView.image?.jpegData(compressionQuality: 1) else {
-            Utils.showAlert(title: "Беда!", message: "Что-то пошло не так.")
+            Utils.showAlert(title: Utils.tr("alert error title"), message: Utils.tr("unknown error"))
             return
         }
         
@@ -131,10 +131,10 @@ class DetailPhotoViewController: UIViewController {
         vc.completionWithItemsHandler = { (_, success, _, error) in
             print("Success: \(success), Error \(String(describing: error))")
             if success {
-                Utils.showAlert(title: "Успех!", message: "Фото сохранено.")
+                Utils.showAlert(title: Utils.tr("alert success title"), message: Utils.tr("photo saved with success"))
             } else {
                 if error != nil {
-                    Utils.showAlert(title: "Беда!", message: "Не удалось сохранить фото.")
+                    Utils.showAlert(title: Utils.tr("alert error title"), message: Utils.tr("photo saved with error"))
                 }
             }
         }

@@ -19,7 +19,7 @@ class PhotosViewController: UICollectionViewController {
         super.viewDidLoad()
         
         navigationController?.navigationBar.tintColor = .reversedSystemColor
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Выход", style: .plain, target: self, action: #selector(logout))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: Utils.tr("quit button"), style: .plain, target: self, action: #selector(logout))
         cellSideLength = view.frame.width * 0.5 - 1
 
         let nibName = UINib(nibName: "SquarePhotoCell", bundle: nil)

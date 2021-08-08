@@ -23,4 +23,8 @@ class Utils {
         alertController.addAction(UIAlertAction(title: "👍", style: .default))
         rootViewController?.present(alertController, animated: true, completion: nil)
     }
+    
+    static func tr(_ key: String, tableName: String? = nil, bundle: Bundle = Bundle.main, value: String = "", comment: String = "") -> String {
+        NSLocalizedString(key, tableName: tableName, bundle: bundle, value: value, comment: comment)
+    }
 }

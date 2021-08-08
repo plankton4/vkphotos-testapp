@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  VKPhotos
+
+  Created by Dmitry Iv on 08.08.2021.
+  
+*/
+
+"quit button" = "Выход";
+"alert success title" = "Успех!";
+"alert error title" = "Беда!";
+"photo saved with success" = "Фото сохранено.";
+"photo saved with error" = "Не удалось сохранить фото.";
+"auth error" = "Ошибка авторизации.";
+"get photos error" = "Не удалось получить фото.";
+"unknown error" = "Что-то пошло не так.";

@@ -20,14 +20,16 @@
 		9B07AB3326BD9FD10050F768 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB3226BD9FD10050F768 /* LoginViewController.swift */; };
 		9B07AB3726BDA06D0050F768 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB3626BDA06D0050F768 /* PhotosViewController.swift */; };
 		9B07AB3B26BDA2350050F768 /* VKLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB3A26BDA2350050F768 /* VKLoginButton.swift */; };
-		9B07AB3D26BDA24F0050F768 /* VKLoginButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B07AB3C26BDA24F0050F768 /* VKLoginButton.xib */; };
 		9B07AB4026BDAC940050F768 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB3F26BDAC940050F768 /* UIColorExtensions.swift */; };
-		9B07AB4326BDBFD50050F768 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB4226BDBFD50050F768 /* Photos.swift */; };
+		9B07AB4326BDBFD50050F768 /* CodablePhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB4226BDBFD50050F768 /* CodablePhotos.swift */; };
 		9B07AB4926BE49D70050F768 /* SquarePhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB4726BE49D70050F768 /* SquarePhotoCell.swift */; };
 		9B07AB4A26BE49D70050F768 /* SquarePhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B07AB4826BE49D70050F768 /* SquarePhotoCell.xib */; };
 		9B07AB4C26BE81860050F768 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB4B26BE81860050F768 /* UserData.swift */; };
 		9B07AB4E26BE92FC0050F768 /* PhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB4D26BE92FC0050F768 /* PhotosModel.swift */; };
 		9B07AB5026BEA7AF0050F768 /* DetailPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07AB4F26BEA7AF0050F768 /* DetailPhotoViewController.swift */; };
+		9B07AB8926BF88800050F768 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B07AB8B26BF88800050F768 /* InfoPlist.strings */; };
+		9B07AB9126BF8B170050F768 /* VKLoginButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B07AB9326BF8B170050F768 /* VKLoginButton.xib */; };
+		9B07AB9C26BF8EFF0050F768 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B07AB9E26BF8EFF0050F768 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,14 +48,22 @@
 		9B07AB3226BD9FD10050F768 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9B07AB3626BDA06D0050F768 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		9B07AB3A26BDA2350050F768 /* VKLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginButton.swift; sourceTree = "<group>"; };
-		9B07AB3C26BDA24F0050F768 /* VKLoginButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VKLoginButton.xib; sourceTree = "<group>"; };
 		9B07AB3F26BDAC940050F768 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
-		9B07AB4226BDBFD50050F768 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		9B07AB4226BDBFD50050F768 /* CodablePhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodablePhotos.swift; sourceTree = "<group>"; };
 		9B07AB4726BE49D70050F768 /* SquarePhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquarePhotoCell.swift; sourceTree = "<group>"; };
 		9B07AB4826BE49D70050F768 /* SquarePhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquarePhotoCell.xib; sourceTree = "<group>"; };
 		9B07AB4B26BE81860050F768 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		9B07AB4D26BE92FC0050F768 /* PhotosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosModel.swift; sourceTree = "<group>"; };
 		9B07AB4F26BEA7AF0050F768 /* DetailPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoViewController.swift; sourceTree = "<group>"; };
+		9B07AB8A26BF88800050F768 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9B07AB8D26BF8A620050F768 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		9B07AB8E26BF8A620050F768 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9B07AB9026BF8A9C0050F768 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		9B07AB9626BF8B760050F768 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/VKLoginButton.xib; sourceTree = "<group>"; };
+		9B07AB9726BF8B800050F768 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/VKLoginButton.strings; sourceTree = "<group>"; };
+		9B07AB9926BF8BD60050F768 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/VKLoginButton.strings; sourceTree = "<group>"; };
+		9B07AB9D26BF8EFF0050F768 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9B07AB9F26BF8F020050F768 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9FDB36E60767ADA2BA5C2634 /* Pods_VKPhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKPhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2093DE97DB0FC14475DFB7 /* Pods-VKPhotos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKPhotos.debug.xcconfig"; path = "Target Support Files/Pods-VKPhotos/Pods-VKPhotos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,7 +134,9 @@
 		9B07AB2426BD86E20050F768 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9B07AB8B26BF88800050F768 /* InfoPlist.strings */,
 				9B07AB1826BD39A60050F768 /* Assets.xcassets */,
+				9B07AB9E26BF8EFF0050F768 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -172,7 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				9B07AB3A26BDA2350050F768 /* VKLoginButton.swift */,
-				9B07AB3C26BDA24F0050F768 /* VKLoginButton.xib */,
+				9B07AB9326BF8B170050F768 /* VKLoginButton.xib */,
 			);
 			path = VKLoginButton;
 			sourceTree = "<group>";
@@ -188,7 +200,7 @@
 		9B07AB4126BDBF430050F768 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9B07AB4226BDBFD50050F768 /* Photos.swift */,
+				9B07AB4226BDBFD50050F768 /* CodablePhotos.swift */,
 				9B07AB4B26BE81860050F768 /* UserData.swift */,
 				9B07AB4D26BE92FC0050F768 /* PhotosModel.swift */,
 			);
@@ -256,6 +268,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 9B07AB0326BD39A50050F768;
 			productRefGroup = 9B07AB0D26BD39A50050F768 /* Products */;
@@ -272,8 +285,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B07AB3D26BDA24F0050F768 /* VKLoginButton.xib in Resources */,
+				9B07AB9126BF8B170050F768 /* VKLoginButton.xib in Resources */,
+				9B07AB8926BF88800050F768 /* InfoPlist.strings in Resources */,
 				9B07AB1C26BD39A60050F768 /* LaunchScreen.storyboard in Resources */,
+				9B07AB9C26BF8EFF0050F768 /* Localizable.strings in Resources */,
 				9B07AB4A26BE49D70050F768 /* SquarePhotoCell.xib in Resources */,
 				9B07AB1926BD39A60050F768 /* Assets.xcassets in Resources */,
 				9B07AB1726BD39A50050F768 /* Main.storyboard in Resources */,
@@ -337,7 +352,7 @@
 				9B07AB4926BE49D70050F768 /* SquarePhotoCell.swift in Sources */,
 				9B07AB1026BD39A50050F768 /* AppDelegate.swift in Sources */,
 				9B07AB3126BD9B4A0050F768 /* SplashScreenViewController.swift in Sources */,
-				9B07AB4326BDBFD50050F768 /* Photos.swift in Sources */,
+				9B07AB4326BDBFD50050F768 /* CodablePhotos.swift in Sources */,
 				9B07AB2C26BD8F5A0050F768 /* VKHelper.swift in Sources */,
 				9B07AB1226BD39A50050F768 /* SceneDelegate.swift in Sources */,
 				9B07AB2926BD8EB90050F768 /* VKDelegate.swift in Sources */,
@@ -354,6 +369,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				9B07AB1626BD39A50050F768 /* Base */,
+				9B07AB9026BF8A9C0050F768 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -362,8 +378,37 @@
 			isa = PBXVariantGroup;
 			children = (
 				9B07AB1B26BD39A60050F768 /* Base */,
+				9B07AB8D26BF8A620050F768 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9B07AB8B26BF88800050F768 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B07AB8A26BF88800050F768 /* en */,
+				9B07AB8E26BF8A620050F768 /* ru */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9B07AB9326BF8B170050F768 /* VKLoginButton.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B07AB9626BF8B760050F768 /* Base */,
+				9B07AB9726BF8B800050F768 /* en */,
+				9B07AB9926BF8BD60050F768 /* ru */,
+			);
+			name = VKLoginButton.xib;
+			sourceTree = "<group>";
+		};
+		9B07AB9E26BF8EFF0050F768 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B07AB9D26BF8EFF0050F768 /* ru */,
+				9B07AB9F26BF8F020050F768 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -373,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -434,6 +480,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  VKPhotos
+
+  Created by Dmitry Iv on 08.08.2021.
+  
+*/
+NSPhotoLibraryAddUsageDescription = "Ну надо";

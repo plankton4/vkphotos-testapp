@@ -48,7 +48,6 @@ Gallery</string>
                             <constraint firstItem="kjh-FH-sFg" firstAttribute="top" secondItem="aFY-4r-kjB" secondAttribute="top" constant="164" id="Xh6-am-iB1"/>
                             <constraint firstItem="kjh-FH-sFg" firstAttribute="leading" secondItem="2iC-JW-VSf" secondAttribute="leading" constant="24" id="hL1-lC-zQp"/>
                             <constraint firstItem="2iC-JW-VSf" firstAttribute="trailing" secondItem="kjh-FH-sFg" secondAttribute="trailing" constant="24" id="lTN-0b-lC8"/>
-                            <constraint firstItem="2iC-JW-VSf" firstAttribute="bottom" secondItem="kjh-FH-sFg" secondAttribute="bottom" constant="499.32999999999998" id="xor-Pj-fFk"/>
                         </constraints>
                     </view>
                 </viewController>

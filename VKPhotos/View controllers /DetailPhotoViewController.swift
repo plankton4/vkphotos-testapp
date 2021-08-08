@@ -128,7 +128,6 @@ class DetailPhotoViewController: UIViewController {
         
         let vc = UIActivityViewController(activityItems: [image], applicationActivities: [])
         vc.completionWithItemsHandler = { (_, success, _, error) in
-            print("Success: \(success), Error \(String(describing: error))")
             if success {
                 Utils.showAlert(title: Utils.tr("alert success title"), message: Utils.tr("photo saved with success"))
             } else {

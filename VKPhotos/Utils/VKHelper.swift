@@ -17,7 +17,6 @@ class VKHelper {
     func authorize(successFunc: (() -> ())?) {
         VK.sessions.default.logIn(
             onSuccess: { info in
-                print("Success vk auth \(info)")
                 if let successFunc = successFunc {
                     DispatchQueue.main.async {
                         successFunc()
@@ -27,14 +26,12 @@ class VKHelper {
             onError: { error in
                 switch error {
                 case .sessionAlreadyAuthorized(_):
-                    print("Session already authorized")
                     if let successFunc = successFunc {
                         DispatchQueue.main.async {
                             successFunc()
                         }
                     }
                 default:
-                    print("Error vk auth \(error)")
                     DispatchQueue.main.async {
                         Utils.showAlert(title: Utils.tr("alert error title"), message: Utils.tr("auth error"))
                     }
@@ -45,7 +42,6 @@ class VKHelper {
     
     func logout() {
         VK.sessions.default.logOut()
-        print("VK Logout")
     }
     
     func isTokenValid() -> Bool {
@@ -53,7 +49,6 @@ class VKHelper {
     }
     
     func getPhotos(callback: ((_ isOk: Bool) -> ())?) {
-        print("Get photos")
         VK.API.Photos.get([
             .ownerId: "-128666765", // MobileUp community id
             .albumId: "266276915"
@@ -69,7 +64,6 @@ class VKHelper {
                 }
             }
         }.onError { error in
-            print(error)
             DispatchQueue.main.async {
                 Utils.showAlert(title: Utils.tr("alert error title"), message: Utils.tr("get photos error"))
             }

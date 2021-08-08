@@ -17,15 +17,12 @@ class SplashScreenViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let isTokenValid = VKHelper.shared.isTokenValid()
-        print("Token is valid? \(isTokenValid)")
         
         if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
             if isTokenValid {
-                print("Set MainViewController")
                 let mainViewController = storyboard.instantiateViewController(identifier: "MainViewController")
                 sceneDelegate.changeRootViewController(mainViewController)
             } else {
-                print("Set LoginViewController")
                 let loginViewController = storyboard.instantiateViewController(identifier: "LoginViewController")
                 sceneDelegate.changeRootViewController(loginViewController)
             }

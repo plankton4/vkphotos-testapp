@@ -51,7 +51,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let window = self.window else {
             return
         }
-        print("Change rootViewController")
+        
         window.rootViewController = vc
         UIView.transition(with: window,
                               duration: 0.08,

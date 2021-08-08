@@ -14,7 +14,6 @@ class DetailPhotoViewController: UIViewController {
     var bottomPhotoView: UICollectionView!
     var photos = [PhotoData]()
     var initialIndex = 0
-    var showItems = true
     var bottomViewHeight = 56 // по макету
     var bottomViewBottomMargin = -34 // по макету
     
@@ -145,6 +144,18 @@ class DetailPhotoViewController: UIViewController {
 extension DetailPhotoViewController: UIScrollViewDelegate {
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return imageView
+    }
+    
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        if scrollView.zoomScale > 1 {
+            if !bottomPhotoView.isHidden {
+                bottomPhotoView.isHidden = true
+            }
+        } else {
+            if bottomPhotoView.isHidden {
+                bottomPhotoView.isHidden = false
+            }
+        }
     }
 }
 

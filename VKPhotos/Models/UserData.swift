@@ -22,4 +22,8 @@ class UserData {
     func setPhotos(photos: [CodablePhoto]) {
         photosModel.fill(photos: photos)
     }
+    
+    func clearDataOnLogout() {
+        photosModel.clearModel()
+    }
 }

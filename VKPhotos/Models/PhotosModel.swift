@@ -11,6 +11,8 @@ class PhotosModel {
     private(set) var photos = [PhotoData]()
     
     func fill(photos: [CodablePhoto]) {
+        self.photos.removeAll()
+        
         for photo in photos {
             let photoData = PhotoData()
             photoData.date = photo.date
@@ -28,6 +30,10 @@ class PhotosModel {
             
             self.photos.append(photoData)
         }
+    }
+    
+    func clearModel() {
+        photos.removeAll()
     }
 }
 

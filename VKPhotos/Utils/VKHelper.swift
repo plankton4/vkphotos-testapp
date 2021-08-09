@@ -41,6 +41,7 @@ class VKHelper {
     }
     
     func logout() {
+        UserData.shared.clearDataOnLogout()
         VK.sessions.default.logOut()
     }
     

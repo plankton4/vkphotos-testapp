@@ -17,10 +17,7 @@ class SquarePhotoCell: UICollectionViewCell {
     }
     
     func configure(urlString: String) {
-        imageView.setContentHuggingPriority(UILayoutPriority(1), for: .horizontal)
-        imageView.setContentHuggingPriority(UILayoutPriority(1), for: .vertical)
-        imageView.setContentCompressionResistancePriority(UILayoutPriority(1), for: .vertical)
-        imageView.setContentCompressionResistancePriority(UILayoutPriority(1), for: .horizontal)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         
         let url = URL(string: urlString)
         imageView.kf.indicatorType = .activity

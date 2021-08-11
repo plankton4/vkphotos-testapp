@@ -32,7 +32,10 @@ class PhotosViewController: UICollectionViewController {
         super.viewDidLayoutSubviews()
         
         if let collectionViewFlowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
-            collectionViewFlowLayout.estimatedItemSize = CGSize(width: cellSideLength, height: cellSideLength)
+            collectionViewFlowLayout.estimatedItemSize = .zero
+            
+            let cellSize = CGSize(width: cellSideLength, height: cellSideLength)
+            collectionViewFlowLayout.itemSize = cellSize
             collectionViewFlowLayout.minimumLineSpacing = 2.0
         }
     }

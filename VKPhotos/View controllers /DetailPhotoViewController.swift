@@ -40,8 +40,7 @@ class DetailPhotoViewController: UIViewController {
             scrollView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
         
-        let imageView = UIImageView()
-        self.imageView = imageView
+        imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         scrollView.addSubview(imageView)

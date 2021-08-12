@@ -75,7 +75,9 @@ extension PhotosViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SquarePhotoCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? SquarePhotoCell else {
+            fatalError("Unable to dequeue SquarePhotoCell.")
+        }
         cell.configure(urlString: photos[indexPath.item].mUrl ?? "")
         
         return cell

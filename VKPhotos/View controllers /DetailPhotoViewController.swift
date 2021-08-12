@@ -8,6 +8,8 @@
 import UIKit
 import Kingfisher
 
+private let reuseIdentifier = "Cell"
+
 class DetailPhotoViewController: UIViewController {
     
     var imageView: UIImageView!
@@ -75,7 +77,7 @@ class DetailPhotoViewController: UIViewController {
         bottomPhotoView.delegate = self
         bottomPhotoView.dataSource = self
         let nibName = UINib(nibName: "SquarePhotoCell", bundle: nil)
-        bottomPhotoView.register(nibName, forCellWithReuseIdentifier: "Cell")
+        bottomPhotoView.register(nibName, forCellWithReuseIdentifier: reuseIdentifier)
         view.addSubview(bottomPhotoView)
         
         NSLayoutConstraint.activate([
@@ -163,7 +165,9 @@ extension DetailPhotoViewController: UICollectionViewDataSource, UICollectionVie
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = bottomPhotoView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! SquarePhotoCell
+        guard let cell = bottomPhotoView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? SquarePhotoCell else {
+            fatalError("Unable to dequeue SquarePhotoCell.")
+        }
         cell.configure(urlString: photos[indexPath.item].sUrl ?? "")
         
         return cell

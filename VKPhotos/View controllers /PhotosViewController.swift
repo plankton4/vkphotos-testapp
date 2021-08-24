@@ -13,30 +13,46 @@ private let reuseIdentifier = "Cell"
 class PhotosViewController: UICollectionViewController {
     
     var photos = [PhotoData]()
-    var cellSideLength: CGFloat = 0.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupView()
+        requestVKPhotos()
+    }
+    
+    
+    /// для поддержки поворотов экрана
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+
+        updateCellSize(parentSize: size)
+    }
+    
+    func setupView() {
         navigationController?.navigationBar.tintColor = .reversedSystemColor
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: Utils.tr("quit button"), style: .plain, target: self, action: #selector(logout))
-        cellSideLength = view.frame.width * 0.5 - 1
 
         let nibName = UINib(nibName: "SquarePhotoCell", bundle: nil)
         collectionView.register(nibName, forCellWithReuseIdentifier: reuseIdentifier)
         
-        requestVKPhotos()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
         if let collectionViewFlowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
             collectionViewFlowLayout.estimatedItemSize = .zero
+            collectionViewFlowLayout.minimumLineSpacing = 2.0
+            updateCellSize(parentSize: CGSize(width: view.bounds.width,
+                                              height: view.bounds.height))
+        }
+    }
+    
+    func updateCellSize(parentSize: CGSize) {
+        if let collectionViewFlowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
             
+            let isPortrait = parentSize.width < parentSize.height
+            let cellSideLength = isPortrait
+                ? (parentSize.width / 2 - 1)
+                : (parentSize.width / 4 - 1)
             let cellSize = CGSize(width: cellSideLength, height: cellSideLength)
             collectionViewFlowLayout.itemSize = cellSize
-            collectionViewFlowLayout.minimumLineSpacing = 2.0
         }
     }
     

@@ -51,8 +51,8 @@ class VKHelper {
     
     func getPhotos(callback: ((_ isOk: Bool) -> ())?) {
         VK.API.Photos.get([
-            .ownerId: "-128666765", // MobileUp community id
-            .albumId: "266276915"
+            .ownerId: "-131738005",
+            .albumId: "250604539"
         ]).onSuccess { data in
             let decoder = JSONDecoder()
         

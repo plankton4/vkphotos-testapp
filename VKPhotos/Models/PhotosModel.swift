@@ -38,31 +38,29 @@ class PhotosModel {
 }
 
 class PhotoData {
+    
     /// value: Size.url
     fileprivate var urlDict = [SizeType: String]()
-    init() { }
     
     var date: Int?
     
     var sUrl: String? {
-        if let url = urlDict[.m] {
-            return url
-        }
-        return nil
+        return urlDict[.m]
     }
     
     var mUrl: String? {
-        if let url = urlDict[.x] {
-            return url
-        }
-        return nil
+        return urlDict[.x] ?? sUrl
     }
     
     var lUrl: String? {
-        if let url = urlDict[.w] {
-            return url
-        }
-        return nil
+        return urlDict[.w] ?? mUrl
+    }
+}
+
+extension PhotoData: CustomStringConvertible {
+    
+    var description: String {
+        return "\n\nSmall: \(String(describing: sUrl)), \nmedium: \(String(describing: mUrl)), \nlarge: \(String(describing: lUrl))"
     }
 }
 

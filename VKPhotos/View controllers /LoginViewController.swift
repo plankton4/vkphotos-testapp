@@ -8,13 +8,11 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    
-    var loginButton: VKLoginButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        loginButton = VKLoginButton.instanceFromNib()
+        let loginButton = VKLoginButton.instanceFromNib()
         loginButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(loginButton)
         loginButton.configure()

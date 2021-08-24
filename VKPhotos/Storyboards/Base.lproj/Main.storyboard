@@ -35,7 +35,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjh-FH-sFg">
                                 <rect key="frame" x="24" y="164" width="327" height="114.66666666666669"/>
-                                <string key="text">Mobile Up
+                                <string key="text">VK
 Gallery</string>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
                                 <nil key="textColor"/>
@@ -55,7 +55,7 @@ Gallery</string>
             </objects>
             <point key="canvasLocation" x="1012" y="453.69458128078821"/>
         </scene>
-        <!--Mobile Up Gallery-->
+        <!--Кокто и кот-->
         <scene sceneID="6FP-Y1-ZxJ">
             <objects>
                 <collectionViewController id="TPT-gv-EnC" customClass="PhotosViewController" customModule="VKPhotos" customModuleProvider="target" sceneMemberID="viewController">
@@ -75,7 +75,7 @@ Gallery</string>
                             <outlet property="delegate" destination="TPT-gv-EnC" id="Pjl-fd-dvi"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Mobile Up Gallery" id="s1G-nn-j6j"/>
+                    <navigationItem key="navigationItem" title="Кокто и кот" id="s1G-nn-j6j"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUx-9n-R8e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

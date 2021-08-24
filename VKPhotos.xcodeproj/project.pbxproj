@@ -64,6 +64,7 @@
 		9B07AB9926BF8BD60050F768 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/VKLoginButton.strings; sourceTree = "<group>"; };
 		9B07AB9D26BF8EFF0050F768 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9B07AB9F26BF8F020050F768 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9BFBCF2B26D5051700234FBA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		9FDB36E60767ADA2BA5C2634 /* Pods_VKPhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKPhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2093DE97DB0FC14475DFB7 /* Pods-VKPhotos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKPhotos.debug.xcconfig"; path = "Target Support Files/Pods-VKPhotos/Pods-VKPhotos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -370,6 +371,7 @@
 			children = (
 				9B07AB1626BD39A50050F768 /* Base */,
 				9B07AB9026BF8A9C0050F768 /* en */,
+				9BFBCF2B26D5051700234FBA /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -549,7 +551,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.plankton4.vkPhotos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -570,7 +572,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.plankton4.vkPhotos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

@@ -16,13 +16,17 @@ class DetailPhotoViewController: UIViewController {
     var bottomPhotoView: UICollectionView!
     var photos = [PhotoData]()
     var initialIndex = 0
-    var bottomViewHeight = 56 // по макету
-    var bottomViewBottomMargin = -34 // по макету
+    let bottomViewHeight = 56 // по макету
+    let bottomViewBottomMargin = -34 // по макету
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupView()
+    }
+    
+    func setupView() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: #selector(backButtonPressed))
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ShareButton"), style: .plain, target: self, action: #selector(sharePhoto))
         
@@ -165,7 +169,7 @@ extension DetailPhotoViewController: UICollectionViewDataSource, UICollectionVie
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = bottomPhotoView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? SquarePhotoCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? SquarePhotoCell else {
             fatalError("Unable to dequeue SquarePhotoCell.")
         }
         cell.configure(urlString: photos[indexPath.item].sUrl ?? "")

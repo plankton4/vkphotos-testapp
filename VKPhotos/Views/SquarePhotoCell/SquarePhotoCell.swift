@@ -10,7 +10,7 @@ import Kingfisher
 
 class SquarePhotoCell: UICollectionViewCell {
 
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet var imageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

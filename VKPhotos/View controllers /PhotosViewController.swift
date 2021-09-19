@@ -66,9 +66,9 @@ class PhotosViewController: UICollectionViewController {
     }
     
     func requestVKPhotos() {
-        VKHelper.shared.getPhotos { [weak self] isOk in
+        VKHelper.shared.getPhotos { isOk in
             if isOk {
-                self?.reload()
+                self.reload()
             }
         }
     }

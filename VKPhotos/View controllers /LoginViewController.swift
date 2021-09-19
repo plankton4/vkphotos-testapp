@@ -24,8 +24,8 @@ class LoginViewController: UIViewController {
     }
     
     @objc func login() {
-        VKHelper.shared.authorize(successFunc: { [weak self] in
-            self?.showNextScreen()
+        VKHelper.shared.authorize(successFunc: {
+            self.showNextScreen()
         })
     }
     

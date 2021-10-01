@@ -40,9 +40,9 @@ class DetailPhotoViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.topAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            scrollView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
         
         imageView = UIImageView()
@@ -53,16 +53,17 @@ class DetailPhotoViewController: UIViewController {
         let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
         let statusBarHeight = window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
         let navigationBarFrameHeight = navigationController?.navigationBar.frame.size.height ?? 0
+        let bottomNotchHeight = window?.safeAreaInsets.bottom ?? 0
+        let shiftValue = navigationBarFrameHeight + statusBarHeight
         
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            imageView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            imageView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            /// получилось нормально отцентрировать вместе с зумом только так 😐, сдвигая по Y  немного
-            imageView.centerYAnchor.constraint(equalTo: scrollView.centerYAnchor,
-                                               constant: -((navigationBarFrameHeight + statusBarHeight) / 2)),
-            imageView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor)
+            imageView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            imageView.heightAnchor.constraint(
+                equalTo: scrollView.heightAnchor,
+                constant: -(shiftValue + bottomNotchHeight)),
+            imageView.centerYAnchor.constraint(
+                equalTo: scrollView.centerYAnchor,
+                constant: -shiftValue)
         ])
         
         setImage(index: initialIndex)

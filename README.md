@@ -1,6 +1,6 @@
 Hi!
 
-<img src="https://user-images.githubusercontent.com/5585699/137859588-6dbdd6df-109b-48f2-bd86-2f8454b6be77.png" height="350">
+<img src="https://user-images.githubusercontent.com/5585699/137859588-6dbdd6df-109b-48f2-bd86-2f8454b6be77.png" width="580">
 
 Что есть:
 * Авторизация в ВК

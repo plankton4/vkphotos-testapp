@@ -49,7 +49,7 @@ class VKHelper {
         return VK.sessions.default.accessToken?.isValid ?? false
     }
     
-    func getPhotos(callback: ((_ isOk: Bool) -> ())?) {
+    func getPhotos(callback: ((_ isOk: Bool) -> Void)?) {
         VK.API.Photos.get([
             .ownerId: "-131738005",
             .albumId: "250604539"
